@@ -1,0 +1,93 @@
+.with_modal {
+	z-index: 100;
+	display: none;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.with_modal_contents, .pass_modal_cotents, .phonenum_modal_cotents {
+	display: none;
+	right: 50%;
+	top: 50%;
+	transform: translate(50%, -50%);
+	position: fixed;
+	width: 460px;
+	height: fit-content;
+	background: white;
+	color: #2b2e38;
+}
+
+span#cmsg {
+	padding-left: 10px;
+}
+
+.cont {
+	position: relative;
+	padding: 25px 30px;
+	text-align: left;
+}
+
+.txt {
+	font-size: 14px;
+}
+
+.cont .accent {
+	color: #68b3ce !important;
+}
+
+.border-box {
+	margin-top: 20px;
+	padding: 15px;
+	border: 1px solid #e6e6e6;
+}
+
+.box_inputForm {
+	position: relative;
+	padding: 7px 12px;
+	background-color: #f3f4f6;
+	text-align: left;
+}
+
+.inner div {
+	margin: 10px 2px;
+}
+
+.box_inputForm input {
+	width: 100%;
+	height: 28px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+	font-size: 16px;
+	color: #000;
+}
+
+.btns {
+	text-align: center;
+	padding: 15px 0;
+}
+
+.remodal-cancel {
+	background: #b8becc;
+}
+
+.remodal-confirm {
+	background: #5754b5;
+}
+
+.btns button {
+	min-width: 129px;
+	padding: 12px 20px;
+	border: none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 16px;
+}

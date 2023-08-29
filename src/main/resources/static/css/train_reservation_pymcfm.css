@@ -1,0 +1,660 @@
+#contentWrap {
+    left: 220px;
+    width: calc(100% - 220px);
+    min-width: 708px;
+    position: absolute;
+    top: 0;
+}
+
+.util {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+.util li.login a span, .util li.logout a span {
+    padding: 4px 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #cfa346;
+    border: 1px solid #fff;
+}
+.util li {
+	/* display:inline-block; */
+	float: left;
+    vertical-align: top;
+}
+.util li a{
+	text-decoration:none;
+	font-size: 11px;
+    color: #fff;
+}
+
+.util > ul li a {
+    position: relative;
+    padding: 0 12px 0 8px;
+}
+
+.title_wrap {
+	background-image:url("http://localhost:9000/images/visual_route_bg.jpg");
+	width:100%;
+	height:105px;
+	text-align: center;
+	position: relative;
+    padding-top: 75px;
+    
+}
+
+.title_wrap h2 {
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+}
+
+.title_wrap.in_process .process {
+    display: inline-block;
+    margin-top: 10px;
+}
+.title_wrap .process {
+    display: none;
+}
+
+.title_wrap.in_process .process li {
+    display: inline-block;
+    font-size: 15px;
+    color: #a1a6b3;
+}
+
+.title_wrap.in_process .process li:after {
+    display: inline-block;
+    content: '';
+    background: url(http://localhost:9000/images/arrow_process.png) right -18px no-repeat;
+    background-size: 28px auto;
+    width: 28px;
+    height: 18px;
+    margin: 0 0 -3px 30px;
+}
+
+.title_wrap.in_process .process li + li {
+    margin-left: 30px;
+}
+
+.title_wrap.in_process .process .active {
+    color: #fff;
+}
+
+.title_wrap.in_process .process li#last:after {
+    display: none;
+    background:none;
+}
+
+.page.depth3 {
+    padding-top: 40px;
+}
+
+
+.page {
+    width: 100%;
+    max-width: 960px;
+    min-width: 708px;
+    margin: 0 auto;
+    padding: 30px 40px 100px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page {
+    width: 960px;
+    -moz-box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+.page h3 {
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+}
+
+.page {
+    width: 100%;
+    max-width: 960px;
+    min-width: 708px;
+    margin: 0 auto;
+    padding: 30px 40px 100px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page {
+    width: 960px;
+    -moz-box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+.noti_wrap {
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.noti_wrap .noti {
+    font-size: 24px;
+    color: #000;
+}
+
+.accent {
+    color: #68b3ce;
+}
+
+.noti_wrap .noti {
+    font-size: 24px;
+    color: #000;
+}
+
+.noti_wrap .desc {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.noti_wrap .desc strong {
+    font-weight: normal;
+    color: #000;
+}
+
+.box_detail_info {
+    position: relative;
+    margin-top: 8px;
+}
+
+.routeHead {
+    position: relative;
+    height: 40px;
+    background-color: #f3f4f6;
+}
+
+.routeHead .date {
+    float: left;
+    padding-left: 20px;
+    font-size: 15px;
+    color: #000;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.routeHead .ticket_number {
+    float: right;
+    margin-top: 8px;
+    padding-right: 20px;
+    font-size: 12px;
+    color: #999;
+}
+
+.routeHead .ticket_number .num {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #000;
+}
+
+.routeBody {
+    border: 1px solid #e6e6e6;
+    border-top: none;
+}
+
+.routeArea.route_wrap {
+    border-bottom: none;
+}
+
+.routeArea {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.route_wrap {
+    position: relative;
+    border-bottom: 1px solid #86c2d8;
+}
+
+.route_wrap .inner {
+    position: relative;
+}
+
+.routeArea.route_wrap .inner:before {
+    border-left: 1px solid #d0d1d3;
+}
+
+.route_wrap .roundBox {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    min-height: 35px;
+    padding-left: 67px;
+    font-size: 22px;
+    color: #f7f7f7;
+}
+
+.route_wrap .roundBox:first-child {
+    margin-top: 0 !important;
+}
+
+.routeArea.route_wrap .roundBox {
+    margin: 20px 0 0;
+    color: #000;
+}
+
+.roundBox_start {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #74b3c7;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid lightgray;
+}
+.roundBox_end{
+	display: block;
+    position: absolute;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #74b3c7;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid lightgray;
+    margin-top: 19px;
+}
+
+.routeArea.route_wrap .roundBox:before {
+    border: 2px solid #e6e6e6;
+    color: #999;
+    box-sizing: border-box;
+}
+
+.route_wrap .roundBox {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    min-height: 35px;
+    padding-left: 67px;
+    font-size: 22px;
+    color: #f7f7f7;
+}
+
+.routeArea.route_wrap .roundBox {
+    margin: 20px 0 0;
+    color: #000;
+}
+
+.routeArea .detail_info {
+    margin-bottom: 0;
+}
+
+.detail_info span:first-child {
+    margin-top: 0;
+}
+.detail_info span {
+    display: block;
+    margin-top: 4px;
+    padding-left: 67px;
+    font-size: 12px;
+    color: #f7f7f7;
+    letter-spacing: 0;
+}
+
+.routeArea .detail_info span {
+    color: #68b3ce;
+}
+
+.routeArea.route_wrap .tbl_type2 table {
+    margin-top: 0;
+}
+
+.tbl_type2 table {
+    width: 100%;
+    border: 0;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.tbl_info caption {
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+}
+
+.tbl_type2 table tbody th {
+    height: 30px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 12px;
+    color: #fff;
+}
+
+.routeArea.route_wrap .tbl_type2 table tbody th {
+    color: #999;
+}
+
+.KO .routeArea.route_wrap .tbl_type2 table tbody td, 
+.EN .routeArea.route_wrap .tbl_type2 table tbody td {
+    padding-left: 8px;
+}
+
+.tbl_type2 table tbody td {
+    height: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.routeArea.route_wrap .tbl_type2 table tbody td {
+    padding-right: 20px;
+    color: #000;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.ico_bus {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.chunil {
+    background: url(http://localhost:9000/images/bus_chunil_s_on.png) 0 0 no-repeat;
+}
+
+.dyexpress, 
+.samhwa, 
+.jabus, 
+.kumho, 
+.chunil, 
+.hanil, 
+.dongbu, 
+.songnisan, 
+.kobus, 
+.chungnam, 
+.chunyeo, 
+.daewon, 
+.gyeonggi, 
+.hanyang, 
+.kyongbuk, 
+.seoul {
+    width: 89px !important;
+    height: 25px !important;
+    font-size: 0 !important;
+}
+
+.routeBody:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.bgGray {
+    background-color: #f3f4f6;
+}
+
+.box_detail_info {
+    position: relative;
+    margin-top: 8px;
+}
+
+.box_detail_info:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #e6e6e6;
+}
+
+.box_detail_info.bgGray:before {
+    background-color: #fff;
+}
+
+.box_detail_info:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.tbl_type3 table {
+    width: 100%;
+    border: 0;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.tbl_type3 caption {
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+}
+
+.tbl_type3 table tbody th {
+    height: 30px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 13px;
+    color: #5f99c9;
+}
+
+.ticket_finish .tbl_type3 table tbody th {
+    color: #68b3ce;
+}
+
+.tbl_type3 table tbody td {
+    height: 30px;
+    padding-right: 20px;
+    text-align: left;
+    font-size: 17px;
+    color: #000;
+    letter-spacing: 0;
+}
+
+.tbl_type3 table.taR tbody td {
+    text-align: right;
+}
+
+.route_box + .section, * + .desc_list, 
+.section > .desc_list:first-child {
+    margin-top: 15px;
+}
+
+.section ul, ol {
+    list-style: none;
+}
+
+.desc_list li, p.bul {
+    padding-left: 8px;
+    text-indent: -8px;
+}
+
+.desc_list li:before, p.bul:before {
+    display: inline-block;
+    content: '';
+    background: #919191;
+    width: 2px;
+    height: 2px;
+    margin: 0 6px 3px 0;
+}
+
+.desc_list li + li {
+    margin-top: 5px;
+}
+
+.txt_puple {
+    color: #5754b5;
+}
+
+ul .dash_list {
+    margin-top: 3px;
+}
+
+.accent2 {
+    color: #5754b5;
+}
+
+.btns {
+    margin-top: 30px;
+}
+
+.btns {
+    font-size: 0;
+    text-align: center;
+}
+
+.btn_cancel, .btn_confirm.ready, .btn_normal {
+    background: #b8becc;
+    color: #fff;
+}
+
+.btnL {
+    display: inline-block;
+    min-width: 130px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    border: none;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.dash_list li:before {
+    display: inline-block;
+    content: '-';
+    background: none;
+    width: 8px;
+    height: auto;
+    margin: 0;
+    text-indent: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

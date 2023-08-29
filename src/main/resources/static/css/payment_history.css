@@ -1,0 +1,486 @@
+.receipt_primary {
+	background-color: #441d7c;
+	padding: 2rem;
+	text-align: center;
+	color: white;
+}
+
+.innerpage-title {
+	font-size: 34px;
+	font-weight: 400;
+}
+
+.tbl_search_result tbody tr td input {
+	position: relative;
+	left: 16%;
+	top: 12px;
+}
+
+.paging_wrap {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.pmy {
+	background: #5754b5;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	right: auto;
+	padding: 6px 6px;
+	margin-left: 10px;
+}
+
+span.radio_wrap {
+	display: flex;
+}
+
+.row h1, .row h6 {
+	color: white;
+}
+
+.adtnPrdPT_modal {
+	width: 80%;
+	position: static;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.subtitle {
+	padding: 20px;
+	font-weight: 200;
+	font-size: 18px;
+}
+
+.title_wrap.mypageT {
+	background: url(../images/visual_pc_mypage.jpg) center 0 no-repeat;
+	background-size: cover;
+}
+
+.tab_wrap.tab_type1 .tabs {
+	position: relative;
+	border: 1px solid #e6e6e6;
+	border-bottom: none;
+}
+
+.txt_purple {
+	color: #bc4ac0;
+}
+
+.tab_wrap .tabs li {
+	border-bottom: 1px solid #e6e6e6;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 12px 0 12px 30px;
+}
+
+input[type="radio"][id^="status"], input[type="radio"][id^="term"] {
+	width: 5%;
+	height: 15px;
+	opacity: 0;
+}
+
+span[class^='custom_radio']	label {
+	color: #bfbfbf;
+}
+
+[class^='custom_radio'] input {
+	position: absolute;
+}
+
+.active a {
+	color: rgb(188, 74, 192) !important;
+}
+
+ul.tabs.violet.mypage_tabs.col3 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.tab_wrap.tab_type1 .tabs>li>a {
+	font-size: 18px;
+	color: #999;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul.tabs.violet.mypage_tabs.col3 {
+	padding-left: 0;
+	margin: 0
+}
+
+.tab_wrap.tab_type1 .tabs.col3>li.active:first-child+li {
+	background: -webkit-linear-gradient(left, rgba(238, 238, 238, 1) 0%,
+		rgba(245, 245, 245, 1) 50%, rgba(254, 254, 254, 1) 93%,
+		rgba(255, 255, 255, 1) 100%)
+}
+
+.tab_wrap .tabs li:last-child {
+	background: -webkit-linear-gradient(left, rgb(255 254 254) 0%,
+		rgba(236, 236, 236, 1) 50%, rgb(248, 247, 247) 74%, rgb(245, 245, 245)
+		88%, rgb(232, 232, 232) 93%, rgb(231, 231, 231) 95%,
+		rgb(229, 229, 229) 100%);
+}
+
+.active img {
+	position: relative;
+	left: 7px;
+	top: 1px;
+}
+
+.receipt_wrap {
+	position: relative;
+	padding: 9px;
+	border: 1px solid #e6e6e6;
+}
+
+ul.innerBox.col4 {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+ul.innerBox.col4 {
+	margin: 0;
+	padding-left: 0;
+}
+
+.box_inputForm {
+	background-color: #f3f4f6;
+	padding: 7px 12px;
+	margin-right: 4px;
+}
+
+.box_inputForm strong {
+	font-size: 13px;
+	color: #333;
+	font-weight: normal;
+	display: block;
+}
+
+.custom_radio {
+	display: inline-block;
+	width: 31.3333%;
+	font-size: 12px;
+}
+
+.custom_radio label {
+	/* 	background: url(../images/custom_chk_s.png) right 0 no-repeat; */
+	
+}
+
+.innerBox .date_picker_wrap .name {
+	font-size: 13px;
+	color: #333;
+}
+
+li.label_tag {
+	height: 51.5px;
+	overflow: hidden;
+}
+
+.date_picker_wrap {
+	background-color: #f3f4f6;
+	padding: 7px 12px;
+	margin-right: 4px;
+}
+
+.innerBox .text .text_date {
+	font-size: 15px;
+}
+
+.ui-datepicker-trigger1 {
+	display: block;
+	float: right;
+	width: 28px;
+	height: 26px;
+	margin-top: -13px;
+}
+
+img.ui-datepicker-trigger1:hover, img.ui-datepicker-trigger2:hover {
+	cursor: pointer;
+}
+
+.ui-datepicker-trigger2 {
+	display: block;
+	float: right;
+	width: 28px;
+	height: 26px;
+	margin-top: -13px;
+}
+
+input#datepicker3, input#datepicker4 {
+	display: none;
+}
+
+p.btns.col1 {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.btn_confirm {
+	background: #5754b5;
+	color: #fff;
+	cursor: pointer;
+}
+
+.btnL {
+	display: inline-block;
+	min-width: 130px;
+	height: 50px;
+	padding: 0 20px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 50px;
+	border: none;
+	vertical-align: middle;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+caption {
+	display: none !important;
+}
+
+.search_result_wrap {
+	position: relative;
+	margin-top: 52px;
+	border: 1px solid #e6e6e6;
+	border-top: 1px solid #999;
+}
+
+table.tbl_search_result {
+	width: 100%;
+	border-collapse: collapse;
+	border-bottom: 1px solid #999;
+}
+
+.tbl_search_result thead tr th {
+	height: 33px;
+	text-align: left;
+	font-size: 13px;
+	color: #666;
+}
+
+.mob_search_result {
+	display: none;
+}
+
+.tbl_search_result .txt_price {
+	display: block;
+	font-size: 15px;
+	color: #000;
+}
+
+.tbl_ico.ico_departure {
+	background: url(../images/bg_ico_departure.png) 0 8px no-repeat;
+	background-size: 14px auto;
+}
+
+.tbl_ico {
+	display: block;
+	padding-left: 20px;
+	font-size: 15px;
+	color: #333;
+}
+
+.search_result_wrap .txt_puple {
+	color: #bc4ac0;
+}
+
+.tbl_ico .txt_date {
+	display: inline-block;
+	font-size: 13px;
+	color: #999;
+	vertical-align: inherit;
+}
+
+.tbl_routeBox .roundBox {
+	display: block;
+	position: relative;
+	min-height: 18px;
+	padding-left: 28px;
+	font-size: 18px;
+	color: #000;
+}
+
+.tbl_routeBox .roundBox:first-child {
+	margin-bottom: 8px;
+}
+
+.tbl_routeBox .roundBox:first-child:after {
+	display: block;
+	content: "";
+	position: absolute;
+	left: 7px;
+	top: 16px;
+	width: 1px;
+	height: 100%;
+	border-left: 1px solid #d0d1d3;
+}
+
+/* .tbl_routeBox .roundBox:before { */
+/* 	content: ""; */
+/* 	position: absolute; */
+/* 	left: 0; */
+/* 	top: 5px; */
+/* 	width: 15px; */
+/* 	height: 15px; */
+/* 	border: 2px solid #d1d2d4; */
+/* 	border-radius: 50%; */
+/* 	background-color: #fff; */
+/* 	box-sizing: border-box; */
+/* 	z-index: 1; . paging_wrap { width : 100%; */
+/* 	margin: 30px 0; */
+/* 	text-align: center; */
+/* 	font-size: 14px; */
+/* } */
+.paging_wrap strong {
+	color: #68b3ce;
+}
+
+.tbl_search_result .txt_div {
+	font-size: 13px;
+	color: #999;
+}
+
+.tbl_search_result tbody td {
+	padding: 15px 10px 15px 0;
+	border-top: 1px solid #f1f2f4;
+	text-align: left;
+	font-size: 14px;
+	color: #333;
+	vertical-align: top;
+}
+
+.tbl_search_result tbody td:first-child {
+	padding-left: 20px;
+	color: #666;
+}
+
+.tbl_search_result thead th:first-child {
+	padding-left: 20px;
+}
+
+.desc_list li, p.bul {
+	padding-left: 8px;
+	text-indent: -8px;
+}
+
+.desc_list li:before, p.bul:before {
+	display: inline-block;
+	content: '';
+	background: #919191;
+	width: 2px;
+	height: 2px;
+	margin: 0 6px 3px 0;
+}
+
+ul.desc_list {
+	padding-left: 0px;
+}
+
+.tbl_search_result tbody tr td:first-child {
+	padding-left: 20px;
+}
+
+.tbl_search_result thead tr th:first-child {
+	padding-left: 20px;
+}
+
+p.paging_wrap {
+	margin: 30px 0;
+}
+
+span.paging {
+	text-align: center;
+}
+/********************
+		 嶺뚮ㅄ維 占쎈펿嶺뚢댙 삕 
+*********************/
+input.calendar {
+	display: none;
+}
+
+span.ui-icon.ui-icon-circle-triangle-w {
+	width: 20px;
+	height: 20px;
+	background: url(../images/btn_datepicker_arrow.gif) 0 0 no-repeat;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span
+	{
+	display: block;
+	position: absolute;
+}
+
+.ui-datepicker .ui-icon {
+	width: 43px;
+	height: 20px;
+	background: url(../images/btn_datepicker_arrow.gif) 0 0 no-repeat;
+}
+
+.datepicker-table td {
+	text-align: center;
+	height: 34px;
+	background-color: #f3f4f6;
+	margin: 30px;
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 0 0;
+	padding: 0;
+	border: 1px solid #888;
+	width: 320px;
+	position: absolute;
+	z-index: 10;
+}
+
+.datepicker-header {
+	border-bottom: 1px solid #e6e6e6;
+	font-weight: normal;
+	text-align: center;
+	line-height: 42px;
+	font-size: 22px;
+	color: #000;
+}
+
+.datepicker-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 5px;
+}
+
+.datepicker-table th {
+	padding: 0.7em 0.3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+
+.ui-datepicker td {
+	padding: 3px;
+	border: 0;
+}
+
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+
+.ui-state-disabled {
+	cursor: default !important;
+	pointer-events: none;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	display: block;
+	text-align: center;
+	line-height:
+}
+
+.ui-datepicker td {
+	padding: 3px;
+	border: 0;
+}

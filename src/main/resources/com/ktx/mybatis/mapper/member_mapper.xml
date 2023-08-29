@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.korail.repository.MemberMapper">
+
+
+    <select id="findPass" parameterType="String" resultType="com.example.korail.dto.MemberDto">
+        SELECT PASS
+        FROM KTX_MEMBER
+        WHERE EMAIL = #{email}
+    </select>
+
+
+    <select id="findId" parameterType="String" resultType="com.example.korail.dto.MemberDto">
+        SELECT ID
+        FROM KTX_MEMBER
+        WHERE EMAIL = #{email}
+    </select>
+
+
+    <select id="memberSelectAll" resultType="com.example.korail.dto.MemberDto">
+        SELECT *
+        FROM ktx_member
+        <where>
+            <if test="ch1=='custname'">
+                AND CUSTNAME LIKE '%'||#{ch2}||'%'
+            </if>
+            <if test="ch1=='id'">
+                AND id LIKE '%'||#{ch2}||'%'
+            </if>
+        </where>
+        ORDER BY rno DESC
+    </select>
+
+
+
+    <select id="search_list" parameterType="com.example.korail.dto.PageDto"
+            resultType="com.example.korail.dto.MemberDto">
+        select rno, id, pass, name, email, pnumber, birth, gender, mdate
+        from (select rownum rno, id, pass, name, email, pnumber, birth, gender , to_char(mdate,'yyyy-mm-dd') mdate
+        from (select id, pass, name, email, pnumber, birth, gender, mdate from ktx_member
+        order by mdate desc)
+        <if test='category =="total"'>
+            where * LIKE '%'||#{cvalue}||'%'
+        </if>
+        <if test='category =="custname"'>
+            where name LIKE '%'||#{cvalue}||'%'
+        </if>
+        <if test='category == "id"'>
+            where id LIKE '%'||#{cvalue}||'%'
+        </if>
+        )
+        where rno between #{startCount} and #{endCount}
+    </select>
+
+
+
+    <select id="list" parameterType="com.example.korail.dto.PageDto" resultType="com.example.korail.dto.MemberDto">
+        select rno,
+               id,
+               pass,
+               name,
+               email,
+               pnumber,
+               birth,
+               gender,
+               mdate
+        from (select rownum                       rno,
+                     id,
+                     pass,
+                     name,
+                     email,
+                     pnumber,
+                     birth,
+                     gender,
+                     to_char(mdate, 'yyyy-mm-dd') mdate
+              from (select id,
+                           pass,
+                           name,
+                           email,
+                           pnumber,
+                           birth,
+                           gender,
+                           mdate
+                    from ktx_member
+                    order by mdate desc))
+        where rno between #{startCount} and #{endCount}
+    </select>
+
+    <select id="loginCheck" parameterType="com.example.korail.dto.MemberDto"
+            resultType="com.example.korail.dto.SessionDto">
+        select  name, id , pass, email, aid
+        FROM KTX_MEMBER
+        where id = #{id}
+
+    </select>
+
+
+    <select id="idCheck" parameterType="String" resultType="int">
+        SELECT COUNT(*)
+        FROM ktx_member
+        WHERE ID = #{id}
+    </select>
+
+
+    <select id="emailCheck" parameterType="String" resultType="int">
+        SELECT COUNT(*)
+        FROM ktx_member
+        WHERE email = #{email}
+    </select>
+
+    <insert id="join" parameterType="com.example.korail.dto.MemberDto">
+        INSERT INTO ktx_member (id, pass, name, email, tel, pnumber, birth, gender, mdate, aid, afile, asfile, preferential, permission)
+        VALUES (#{id}, #{pass}, #{name}, #{email}, #{tel}, #{pnumber}, #{birth}, #{gender}, sysdate, ('M_'||ltrim(to_char(sequ_ktx_mileage.nextval,'0000'))), null, null, null, null)
+    </insert>
+
+
+
+    <update id="update" parameterType="com.example.korail.dto.MemberDto">
+        UPDATE KTX_MEMBER
+        SET PASS= #{pass}
+        WHERE email = #{email}
+    </update>
+
+
+
+
+</mapper>

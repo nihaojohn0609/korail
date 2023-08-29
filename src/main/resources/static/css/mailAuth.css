@@ -1,0 +1,86 @@
+#contentWrap {
+    left: 220px;
+    width: calc(100% - 220px);
+    min-width: 708px;
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+.loginBox{
+border:1px solid gray;
+width:700px;
+padding-left:50px;
+
+} 
+
+.login_ti{
+	margin:0;
+	padding:0;
+}
+
+.title_wrap.loginT{
+	background : url("http://localhost:9000/images/visual_joinT_bg.gif")center 0 no-repeat;
+	background-size: cover;
+	color:white;
+	font-size: 34px;
+	font-weight: normal;
+}	
+	
+.title_wrap {
+    position: relative;
+    background: #214c5a;
+    height: 180px;
+    padding-top: 75px;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+	
+.util{
+	position: absolute;
+	top:0px;
+	right: 30px;	
+	}
+.util ul {
+    float: left;
+}
+.util > ul li {
+    float: left;
+    vertical-align: top;
+}
+.util li.account, .util > ul li a {
+    position: relative;
+    padding: 0 12px 0 8px;
+}
+.util li a, .util select {
+    font-size: 11px;
+    color: #fff;
+}
+.util li.login a span, .util li.logout a span {
+    padding: 4px 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #cfa346;
+    border: 1px solid #fff;
+}
+.util li a, .util select {
+    font-size: 11px;
+    color: #fff;
+}
+.util > ul li a:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    border-left: 1px solid #fff;
+    opacity: 0.4;
+}
+
+	 

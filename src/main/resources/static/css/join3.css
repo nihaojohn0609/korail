@@ -1,0 +1,323 @@
+#contentWrap {
+    left: 220px;
+    width: calc(100% - 220px);
+    min-width: 708px;
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+.loginBox{
+border:1px solid gray;
+width:700px;
+padding-left:50px;
+
+} 
+
+.login_ti{
+	margin:0;
+	padding:0;
+}
+
+.title_wrap.loginT{
+	background : url("http://localhost:9000/images/visual_joinT_bg.gif")center 0 no-repeat;
+	background-size: cover;
+	color:white;
+	font-size: 34px;
+	font-weight: normal;
+}	
+	
+.title_wrap {
+    position: relative;
+    background: #214c5a;
+    height: 180px;
+    padding-top: 75px;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+	
+.util{
+	position: absolute;
+	top:0px;
+	right: 30px;	
+	}
+.util ul {
+    float: left;
+}
+.util > ul li {
+    float: left;
+    vertical-align: top;
+}
+.util li.account, .util > ul li a {
+    position: relative;
+    padding: 0 12px 0 8px;
+}
+.util li a, .util select {
+    font-size: 11px;
+    color: #fff;
+}
+.util li.login a span, .util li.logout a span {
+    padding: 4px 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #cfa346;
+    border: 1px solid #fff;
+}
+.util li a, .util select {
+    font-size: 11px;
+    color: #fff;
+}
+.util > ul li a:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    border-left: 1px solid #fff;
+    opacity: 0.4;
+}
+
+
+ul{
+list-style:none;
+}
+
+input{
+	padding: 10px;
+}
+input[type ='radio']{
+	margin-left: 10px;
+}
+
+.space{
+	padding:10px;
+	margin-right: 40px;	
+
+}
+	.page{
+	height:100%;
+	margin:0;
+}
+.join_input , .btn_ch {
+height:51px;
+}
+.join_input{
+width: 450px;
+margin:auto;
+border-radius:3px;
+border: 1px solid gray;
+height:51px;
+margin-left:50px;
+}
+.join_input2{
+width: 380px;
+margin:auto;
+border-radius:3px;
+border: 1px solid gray;
+height:51px;
+}
+.join_input1{
+width: 350px;
+margin:auto;
+border-radius:3px;
+border: 1px solid gray;
+height:51px;
+margin-left :50px;
+}
+.check_btn{
+		  width: 90px;
+  height: 40px;
+  margin: auto 0;
+  color:white;
+  background:#66CCFF;
+  border:none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.email_input{
+width: 180px;
+margin:auto;
+height:51px;
+border-radius:3px;
+border: 1px solid gray;
+} 
+.info_birth{
+	width: 360px;
+margin:auto;
+border-radius:3px;
+border: 1px solid gray;
+}
+.wrapper{
+	  text-align: center;
+	
+}
+
+#info_id{
+	position:relative;
+}
+#info_id button{
+
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  top: 0;
+  bottom: 0;
+  right: 340px;
+  margin: auto 0;
+  color:white;
+  background:#66CCFF;
+  border:none;
+  border-radius: 5px;
+}
+.join_list li{
+	padding :10px;
+	display: list-item;
+    text-align: center;
+    MARGIN-LEFT: 50PX;
+}
+.join_list p{
+	margin-bottom: 20px;
+	
+}
+.btn_style2{	 
+  width: 60px;
+  height: 30px;
+  margin: auto 0;
+  margin-left:20px;
+  color:white;
+  background:darkgray;
+  border:none;
+  border-radius: 5px;
+	
+}
+
+.btn_style{
+	  width: 90px;
+  height: 40px;
+  margin: auto 0;
+  color:white;
+ background:darkgray;
+  border:none;
+  border-radius: 5px;
+}
+.join_bo{
+    width: 60%;
+    margin-left: 300px;
+    text-align: center;
+}	
+
+.girl_jo{
+	margin-left:10px;
+}
+
+
+
+
+						/*cgv  */
+/*****************************
+	Join Form style sheet
+******************************/
+section.join form ul {
+	/* border:1px solid blue; */
+	font-size:10pt;
+	list-style-type:none;
+}
+section.join form ul li {
+	clear:left;
+}
+section.join form ul li > label {
+	display:inline-block;
+	width:150px;
+	padding:10px 0;
+	background:#ddd;
+	color:black;
+	border-radius:4px;
+	font-size:10pt;
+	font-weight:700;
+	float:left;
+	text-align:center;
+	margin:0 10px 5px 0;
+}
+.input1 {
+	width:40%;	
+	padding:8px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+}
+input[name='email1'], input[name='email2'] {
+	width:17%;
+	padding:8px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+}
+input[name='email2'] +select, select[name='phonenumber1'] {
+	/* border:1px solid red; */
+	width:80px;
+	padding:8px 4px;
+	font-size:9pt;
+	border:1px solid lightgray;
+	border-radius:4px;
+	margin-left:5px;
+}
+input[name='phonenumber2'], input[name='phonenumber3'] {
+	width:80px;
+	border:1px solid #ddd;
+	border-radius:4px;
+	padding:8px 4px;
+	text-align:center;
+}
+textarea[name='intro'] {
+	border:1px solid #ddd;
+	border-radius:4px;
+	width:60%;
+	height:100px;
+	font-size:10pt;
+	padding:8px 15px;
+}
+input[type='radio'], input[type='radio'] +span,
+ input[type='checkbox'], input[type='checkbox'] +span {
+	/* border:1px solid red; */
+	font-size:9pt;
+	margin-left:5px;
+	padding:8px 4px;
+	vertical-align:middle;
+}
+form[name='joinForm'] ul li:last-child {
+	/* border:1px solid red; */
+	text-align:center;
+	padding:20px 0;
+	text-align: start;
+    margin-left: 250px;
+}
+form[name='joinForm'] ul li:last-child button:first-child{
+	margin-right:10px;
+}
+form[name='joinForm'] ul #cmsg {
+	/* border:1px solid red;  */
+	display:none;
+	margin:7px 0px 7px 170px; 
+}
+.joinput{
+	    margin-left: 200px;
+}
+.join2_p{
+	
+    text-align: center;
+    font-size: 20pt;
+    color: black;
+    margin: 30px 0px
+	}
+						
+						
+	.join_email{ width: 20%;
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

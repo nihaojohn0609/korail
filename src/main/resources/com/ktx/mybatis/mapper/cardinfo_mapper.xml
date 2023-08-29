@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.korail.repository.CardinfoMapper">
+    <insert id="getPayment" parameterType="com.example.korail.dto.CardinfoDto">
+        insert into KTX_CARDINFO
+            (cardcomp,cardnum,recognizenum,birthday,cid)
+        <if test='paymentmethod == "card"'>
+        values
+            (#{cardcomp},#{cardnum},#{recognizenum},#{birthday},'C_'||ltrim(to_char(sequ_ktx_cardinfo.nextval,'0000')))
+        </if>
+        <if test='paymentmethod == "kakao"'>
+            values
+            ('카카오 페이', '---', '---', '---', 'C_' || ltrim(to_char(sequ_ktx_cardinfo.nextval, '0000')))
+        </if>
+    </insert>
+    <update id="getPaymentUPdate" parameterType="com.example.korail.dto.CardinfoDto">
+        update KTX_CARDINFO
+        <if test="paymentmethod == 'card'">
+            set cardcomp=#{cardcomp}, cardnum=#{cardnum}, recognizenum=#{recognizenum},birthday=#{birthday}
+        </if>
+        <if test="paymentmethod == 'kakao'">
+            set cardcomp='카카오 페이', cardnum='---', recognizenum='---',birthday='---'
+        </if>
+            where cid=#{cid}
+    </update>
+</mapper>

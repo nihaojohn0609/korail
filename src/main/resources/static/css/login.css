@@ -1,0 +1,239 @@
+.failtitle{
+	font-weight: bold;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+
+.login_ti{
+	margin:0;
+	padding:0;
+}
+.loginBox{
+width:700px;
+padding-left:50px;
+
+} 
+#contentWrap {
+    left: 220px;
+    width: calc(100% - 220px);
+    min-width: 708px;
+    position: absolute;
+    top: 0;
+}
+
+
+
+	
+.title_wrap {
+    position: relative;
+    background: #214c5a;
+    height: 180px;
+    padding-top: 75px;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+	
+.util{
+	position: absolute;
+	top:0px;
+	right: 30px;	
+	}
+.util ul {
+    float: left;
+}
+.util > ul li {
+    float: left;
+    vertical-align: top;
+}
+.util li.account, .util > ul li a {
+    position: relative;
+    padding: 0 12px 0 8px;
+}
+.util li a, .util select {
+    font-size: 11px;
+    color: #fff;
+}
+.util li.login a span, .util li.logout a span {
+    padding: 4px 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #cfa346;
+}
+.util li a, .util select {
+    font-size: 11px;
+    color: #fff;
+}
+.util > ul li a:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    border-left: 1px solid #fff;
+    opacity: 0.4;
+}
+
+
+
+
+	.login_wrap{
+	 width: 100%;
+  height: 600px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+	}
+	
+	
+	.login_int{
+	margin:30px;
+	
+	}
+	.login_id {
+  margin-top: 20px;
+  width: 80%;
+}
+h4{
+font-weight: 1000px;
+
+}
+
+.login_id input {
+  width: 100%;
+  height: 50px;
+  margin: 20px;
+  padding: 0px 20px;
+  outline: none;
+	background-color:#f3f4f6;
+	border:none;
+  
+}
+	.login_pass {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.login_pass input {
+  width: 100%;
+  height: 50px;
+  margin: 20px;
+  padding: 0px 20px;
+  outline: none;
+	background-color:#f3f4f6;
+	border:none;
+  
+}
+	.input_box1{
+	display:inline_block;
+	position:relative;
+	height:60px;
+	width:500px;
+	margin:30px 0px 30px 40px ;
+	padding:10px;
+	
+	}
+	.input_box2{
+	display:inline_block;
+	position:relative;
+	top:30px;
+	right:50px;
+	}
+	.input_box1 input{
+	background:transparent;
+	border:none;
+	}
+	.input_box2 label{
+	border: none;
+	position:relative;
+	top:0;
+	right:10px;
+	}
+	.loginBoth {
+		list-style:none;
+		display:block;
+		width:80%;
+		margin:0px;
+		padding-left:30px;
+	}
+
+	label[for ="usrId"]{
+	left:10px;
+	
+	}
+	.btn_style2{
+	width:150px;
+	height:50px;
+	border-radius:10px;
+	font-size:20px;
+	background-color:#C3F5F9F;
+	border:1px solid white;
+	margin-right:20px;
+	}
+	
+	.btn_style2:hover{
+		cursor:pointer;
+	}
+	.btn_logbox1 {
+	display:flex;
+	 justify-content: center;
+  align-items: center;
+  flex-direction: column;
+	}
+.box_find{
+	text-align:center;
+	margin-top:20px;
+}
+.fail_image{
+	text-align:center;
+	margin: 50px 50px 20px 50px;
+}	
+.title_wrap{
+	background : url("http://localhost:9000/images/visual_joinT_bg.gif")center 0 no-repeat;
+	background-size: cover;
+	color:white;
+	font-size: 34px;
+	font-weight: normal;
+}	
+.find1{
+margin-right:10px;
+}
+
+.admin{
+	text-align:center;
+}
+.admin_box{
+	height:300px;
+	text-align:center;
+    padding-top: 100px;
+}
+.fail_alert{
+	    text-align: center;
+
+}
+	
+.btn_fail{
+    margin-top: 30px;
+    -webkit-font-smoothing: antialiased;
+    background-color: darkgray;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    text-decoration: none;
+    user-select: none;
+    letter-spacing: 1px;
+    color: white;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    transition: all 0.1s ease-out;
+}

@@ -1,0 +1,107 @@
+HTML CSS JSResult Skip Results Iframe
+EDIT ON 
+	
+.dateHead div {
+	background: #e31b20;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.grid.dateBoard .cdate:nth-child(7n+1) {
+	background-color: rgb(248 210 206/ 50%);
+}
+
+.grid.dateBoard .cdate:nth-child(7n) {
+	background-color: rgb(217 233 250/ 50%);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(7, 40px);
+	grid-gap: 5px;
+}
+
+.grid.dateBoard {
+	padding-bottom: 15px;
+}
+
+.cdate:hover {
+	background: aliceblue;
+}
+
+.grid div {
+	padding: .6rem;
+	font-size: .7rem;
+	cursor: pointer;
+}
+
+.dateBoard div {
+	color: #222;
+	font-weight: bold;
+	min-height: 3rem;
+	padding: 8px 8px;
+	border-radius: 5px;
+	border: 1px solid #eee;
+}
+
+.noColor {
+	background: #eee;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px 32px 5px;
+}
+
+/*  †« š¯ Š¦ è¸°ê¾ª “‰ */
+.cbtn {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 3px solid #000;
+	border-width: 3px 3px 0 0;
+	cursor: pointer;
+}
+
+.prevDay {
+	transform: rotate(-135deg);
+}
+
+.nextDay {
+	transform: rotate(45deg);
+}
+
+/* ---- */
+@import
+	url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css")
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: Pretendard;
+}
+
+.rap {
+	max-width: 420px;
+	display: none;
+	padding: 0 1.4rem;
+	margin-top: 1.4rem;
+	position: absolute;
+	background: white;
+	border: 1px solid;
+	z-index: 1;
+}
+
+.dateHead {
+	margin: .4rem 0;
+}
+
+h2.dateTitle {
+	font-size: initial;
+	font-weight: bold;
+}

@@ -1,0 +1,68 @@
+.korail_logo {
+	margin-right: 20px;
+}
+
+#footer {
+	position: relative;
+	width: -webkit-calc(100% - 58px);
+	width: -moz-calc(100% - 58px);
+	width: calc(100% - 58px);
+	min-height: 90px;
+	padding: 20px 0 25px;
+	/* border-top: 1px solid #e5e5e5; */
+}
+
+#footer {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.foot_menu {
+	padding-right: 155px;
+	margin-bottom: 25px;
+}
+
+.foot_menu a, .sub .foot_addr, .sub .foot_copy {
+	color: #999;
+}
+
+.foot_menu a:first-child {
+	padding-left: 20px;
+}
+
+.foot_menu a {
+	display: inline-block;
+	position: relative;
+	padding-right: 20px;
+	font-size: 12px;
+}
+
+.foot_menu a.indl {
+	color: #68b3ce;
+	font-weight: bold;
+	font-size: 14.4px;
+}
+
+.foot_addr {
+	margin: 3px 0;
+	font-size: 11px;
+	padding-left: 20px;
+}
+
+.foot_copy {
+	font-size: 10px;
+	padding-left: 20px;
+}
+
+.foot_com {
+	position: absolute;
+	right: 0;
+	top: 55px;
+}
+
+.foot_com img {
+	max-width: 100px;
+}

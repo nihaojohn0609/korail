@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.example.korail.repository.OrderMapper">
+
+
+	<select id="seatnumUp" parameterType="com.example.korail.dto.UpdateDto" resultType="com.example.korail.dto.SeatNumberDto">
+			select CHAIRNUM  from ktx_order
+				where SSTATION = #{depplacename} and DSTATION= #{arrplacename} and DEPPLANDTIME = #{rtimes}  and STIME = #{start_date} and cancel= 0 and chairnum like '_'||#{trnumber}||'호%'
+	</select>
+
+	<select id="seatnum" parameterType="com.example.korail.dto.ReservationDto" resultType="com.example.korail.dto.SeatNumberDto">
+			select CHAIRNUM  from ktx_order
+				where SSTATION = #{start_add} and DSTATION= #{end_add} and DEPPLANDTIME = #{rtime}  and STIME = #{start_date} and cancel= 0 and chairnum like '_'||#{trnumber}||'호%'
+		<!-- select SUBSTR(CHAIRNUM, 4,2) seatnum from
+		(select CHAIRNUM  from ktx_order where SSTATION ='' and DSTATION='부산' and DEPPLANDTIME = '20230613' and DTIME='09시38분')
+			where substr(CHAIRNUM, 1,1) = '1' -->
+	</select>
+
+	<insert id="payment" parameterType="com.example.korail.dto.OrderDto" >
+		insert into KTX_ORDER
+			(cid,oid,sstation,rdate,stime,dtime,dstation,price,reservnum,trainnum,chairnum,ticketqty,id,cancel,depPlaceId,arrPlaceId,depPlandTime,cardnum,email)
+		values
+			('C_'||ltrim(to_char(sequ_ktx_order.nextval,'0000')),'O_'||ltrim(to_char(sequ_ktx_order.nextval,'0000')),#{sstation},sysdate,#{stime},#{dtime},#{dstation},#{price},#{reservnum},#{trainnum},#{chairnum},#{ticketqty},
+			#{id},'0',#{depPlaceId},#{arrPlaceId},#{depPlandTime},#{cardnum},#{email})
+	</insert>
+
+    <update id="updatePayment" parameterType="com.example.korail.dto.OrderDto">
+        update ktx_order set
+         rdate=sysdate, stime=#{stime}, dtime=#{dtime}, price=#{price}, trainnum=#{trainnum},
+         chairnum=#{chairnum}, depPlandTime=#{depPlandTime}, cardnum=#{cardnum}, ticketqty=#{ticketqty}
+        where reservnum=#{reservnum}
+    </update>
+
+    <select id="select" parameterType = "com.example.korail.dto.OrderDto" resultType="com.example.korail.dto.OrderDto">
+        SELECT id, sstation, depPlandTime, stime, dstation, ticketqty, price, reservnum, trainnum, chairnum, cancel, depPlaceId, arrPlaceId, cardnum, email, to_char(cdate,'yyyy-mm-dd') cdate, rdate, cid
+        FROM KTX_ORDER
+        <choose>
+            <when test='id == "guest" and cardnum == ""'>
+                where email=#{email}
+            </when>
+            <when test='id == "guest" and email == ""'>
+                where cardnum=#{cardnum}
+            </when>
+            <otherwise>
+                where id=#{id}
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="selectcard" parameterType="map" resultType="int">
+        SELECT count(*) from ktx_order
+        <choose>
+            <when test='cardnum == ""'>
+                where email=#{email}
+            </when>
+            <otherwise>
+                where cardnum=#{cardnum}
+            </otherwise>
+        </choose>
+    </select>
+
+    <update id="cancel" parameterType="String">
+        update ktx_order set
+        cancel=1, cdate=sysdate
+        where reservnum=#{reservnum}
+    </update>
+
+    <select id="selected" parameterType="String" resultType="com.example.korail.dto.OrderDto">
+        SELECT O.sstation, O.rdate, O.DEPPLANDTIME, O.STIME, O.DTIME, O.DSTATION, O.PRICE, O.RESERVNUM, O.TRAINNUM, O.CHAIRNUM, O.CANCEL, O.DEPPLACEID, O.ARRPLACEID, O.CARDNUM, O.TICKETQTY, C.CARDCOMP
+             ,C.RECOGNIZENUM
+        FROM ktx_order O, ktx_cardinfo C
+        WHERE O.cid= C.cid and reservnum=#{reservnum}
+    </select>
+
+    <select id="list" parameterType="com.example.korail.dto.PageDto" resultType="com.example.korail.dto.OrderDto">
+        SELECT rno, sstation, rdate, depPlandTime, stime, dtime, dstation, price, reservnum, trainnum, chairnum, id, cardnum, cancel
+        FROM (select rownum rno, sstation, to_char(rdate,'yy-mm-dd') rdate, depPlandTime, stime, dtime, dstation, price, reservnum, trainnum, chairnum, id, cardnum, cancel
+                 from (select sstation, rdate, depPlandTime, stime, dtime, dstation, price, reservnum, trainnum, chairnum, id, cardnum, cancel
+                     FROM KTX_ORDER where cancel=0
+                    order by rdate desc))
+        where rno between #{startCount} and #{endCount}
+    </select>
+
+
+    <select id="search" parameterType="com.example.korail.dto.PageDto"  resultType="com.example.korail.dto.OrderDto">
+        SELECT rno, sstation, rdate, depPlandTime, stime, dtime, dstation, price, reservnum, trainnum, chairnum, id, cardnum, cancel
+        from (select rownum rno, sstation, to_char(rdate,'yyyy-mm-dd') rdate, depPlandTime, stime, dtime, dstation, price, reservnum, trainnum, chairnum, id, cardnum, cancel
+                 from (select sstation, rdate, depPlandTime, stime, dtime, dstation, price, reservnum, trainnum, chairnum, id, cardnum, cancel
+                     FROM KTX_ORDER
+                    order by rdate desc)
+              <if test= 'category =="reservnumber"'>
+                where reservnum LIKE '%'||#{cvalue}||'%'
+              </if>
+              <if test= 'category == "id"'>
+                where id LIKE '%'||#{cvalue}||'%'
+             </if>
+            )
+        where rno between #{start}  and #{end}
+    </select>
+	
+</mapper>
+
+
+

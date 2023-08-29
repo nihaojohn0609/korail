@@ -1,0 +1,87 @@
+
+.util li.login a span, .util li.logout a span {
+    padding: 4px 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #cfa346;
+    border: 1px solid #fff;
+}
+
+.util li a{
+	text-decoration:none;
+	font-size: 11px;
+    color: #fff;
+}
+
+.util {
+	position: absolute;
+	top: 0px;
+	right: 30px;
+	margin-top: 10px;
+}
+
+.util>ul li a:after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 3px;
+	right: 0;
+	width: 1px;
+	height: 10px;
+	border-left: 1px solid #fff;
+	opacity: 0.4;
+}
+
+.util ul {
+	float: left;
+}
+
+.clfix {
+	zoom: 1;
+}
+
+.clfix {
+	display: block;
+}
+
+.util li.account {
+	font-size: 12px;
+	letter-spacing: 0;
+	color: #ffd279;
+}
+
+.util>ul li {
+	float: left;
+	vertical-align: top;
+}
+
+.util li.logout a {
+	padding-left: 0;
+}
+
+.util li.account, .util>ul li a {
+	position: relative;
+	padding: 0 12px 0 8px;
+}
+
+.util li a, .util select {
+	font-size: 11px;
+	color: #fff;
+}
+
+.util .selectricWrapper {
+	height: 17px;
+	padding: 0;
+}
+
+.clfix_logout {
+	display : none;
+}
+
+.title_wrap h2 {
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+	font-weight: bold;
+}
